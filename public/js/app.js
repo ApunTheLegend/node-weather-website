@@ -3,8 +3,6 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
-// messageOne.textContent = 'From JavaScript'
-
 weatherform.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -21,7 +19,7 @@ weatherform.addEventListener('submit', (e) => {
             }
             else {
                 messageOne.textContent = data.location
-                messageTwo.textContent = `Current: ${data.forecast.current}, Feels Like: ${data.forecast.feelslike}`
+                messageTwo.textContent = `Current: ${data.forecast.current}, Feels Like: ${data.forecast.feelslike}, Humidity: ${data.forecast.humidity}%, Weather Description: ${data.forecast.weather_description}`
             }
         })
     })
